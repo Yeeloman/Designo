@@ -4,7 +4,10 @@
 	import { Separator } from '$lib/components/ui/separator';
 	import logoDark from '$assets/shared/desktop/logo-dark.png';
 	import logoLight from '$assets/shared/desktop/logo-light.png';
+	import Icon from '@iconify/svelte';
 	let { children } = $props();
+
+	const iconStyles = 'w-8 h-8 text-[#E78168]';
 </script>
 
 <svelte:head>
@@ -59,7 +62,13 @@
 				<p>P : +1 253-863-8967</p>
 				<p>M : contact@designo.co</p>
 			</div>
-			<div></div>
+			<div class="flex items-center justify-between space-x-12">
+				<Icon icon="ri:facebook-box-fill" class={iconStyles} />
+				<Icon icon="mdi:instagram" class={iconStyles} />
+				<Icon icon="bi:twitter-x" class={iconStyles} />
+				<Icon icon="teenyicons:pinterest-solid" class={iconStyles} />
+				<Icon icon="mdi:youtube" class={iconStyles} />
+			</div>
 		</div>
 	</div>
 {/snippet}

@@ -1,21 +1,50 @@
 <script>
 	import '../app.css';
-	import logoDark from '$lib/assets/shared/desktop/logo-dark.png';
+	import { Button } from '$lib/components/ui/button';
+	import logoDark from '$assets/shared/desktop/logo-dark.png';
 	let { children } = $props();
 </script>
 
-<div class="my-10 flex h-[100px] w-full items-center justify-center p-14">
-	<div class="w-[15%]"></div>
-	<div class="w-[30%] flex-grow">
-		<img class="w-[90%]" src={logoDark} alt="Designo Logo" />
-	</div>
-	<div class="w-4/6"></div>
-	<div class="flex w-[45%] space-x-7">
-		<a class="font-thin hover:underline hover:underline-offset-8" href="/about">OUR COMPANY</a>
-		<a class="font-thin hover:underline hover:underline-offset-8" href="/locations">LOCATONS</a>
-		<a class="font-thin hover:underline hover:underline-offset-8" href="/contact">CONTACT</a>
-	</div>
-	<div class="w-[15%]"></div>
-</div>
+<svelte:head>
+	<title>designo: Home</title>
+</svelte:head>
 
-{@render children()}
+{#snippet header(logoDark)}
+	<div class="flex h-[100px] w-[80%] items-center justify-between">
+		<div class="w-[20%]">
+			<a href="/">
+				<img class="w-[90%]" src={logoDark} alt="Designo Logo" />
+			</a>
+		</div>
+		<div class="flex w-auto space-x-7">
+			<a class="font-thin hover:underline hover:underline-offset-8" href="/about">OUR COMPANY</a>
+			<a class="font-thin hover:underline hover:underline-offset-8" href="/locations">LOCATONS</a>
+			<a class="font-thin hover:underline hover:underline-offset-8" href="/contact">CONTACT</a>
+		</div>
+	</div>
+{/snippet}
+
+{#snippet footer()}
+	<div class="flex w-[80%] items-center justify-center rounded-2xl bg-[#E78168] p-16">
+		<div class="w-3/4 font-semibold text-white">
+			<h1 class="m-5 w-[60%] text-4xl">Let’s talk about your project</h1>
+			<p class="m-5 w-[70%] text-sm">
+				Ready to take it to the next level? Contact us today and find out how our expertise can help
+				your business grow.
+			</p>
+		</div>
+		<div class="w-1/4">
+			<Button
+				class="bg-white p-10 text-base text-black hover:bg-[#ffad9b] hover:text-white"
+				href="/contact">Get in touch</Button
+			>
+		</div>
+	</div>
+{/snippet}
+
+<!-- main content -->
+<div class=" m-[2%] flex flex-col items-center justify-center">
+	{@render header(logoDark)}
+	{@render children()}
+	{@render footer()}
+</div>

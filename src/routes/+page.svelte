@@ -1,1 +1,1 @@
-<p>test</p>
+<p>main content of the home page</p>

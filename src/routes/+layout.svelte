@@ -9,17 +9,17 @@
 	<title>designo: Home</title>
 </svelte:head>
 
-{#snippet header(logoDark)}
+{#snippet header(logo, underlineOffset)}
 	<div class="flex h-[100px] w-[80%] items-center justify-between">
 		<div class="w-[20%]">
 			<a href="/">
-				<img class="w-[90%]" src={logoDark} alt="Designo Logo" />
+				<img class="w-[90%]" src={logo} alt="Designo Logo" />
 			</a>
 		</div>
 		<div class="flex w-auto space-x-7">
-			<a class="font-thin hover:underline hover:underline-offset-8" href="/about">OUR COMPANY</a>
-			<a class="font-thin hover:underline hover:underline-offset-8" href="/locations">LOCATONS</a>
-			<a class="font-thin hover:underline hover:underline-offset-8" href="/contact">CONTACT</a>
+			<a class="font-thin hover:underline {underlineOffset}" href="/about">OUR COMPANY</a>
+			<a class="font-thin hover:underline {underlineOffset}" href="/locations">LOCATONS</a>
+			<a class="font-thin hover:underline {underlineOffset}" href="/contact">CONTACT</a>
 		</div>
 	</div>
 {/snippet}
@@ -44,7 +44,7 @@
 
 <!-- main content -->
 <div class=" m-[2%] flex flex-col items-center justify-center">
-	{@render header(logoDark)}
+	{@render header(logoDark, 'underline-offset-8')}
 	{@render children()}
 	{@render footer()}
 </div>

@@ -7,7 +7,7 @@
 	import Icon from '@iconify/svelte';
 	let { children } = $props();
 
-	const iconStyles = 'w-8 h-8 text-[#E78168]';
+	const iconStyles = 'w-8 h-8 text-pink-cold';
 </script>
 
 <svelte:head>
@@ -31,7 +31,7 @@
 
 {#snippet footer()}
 	<!-- this is the get in touch section -->
-	<div class="top-0 flex w-[80%] items-center justify-center rounded-2xl bg-[#E78168] p-16">
+	<div class="top-0 flex w-[80%] items-center justify-center rounded-2xl bg-pink-cold p-16">
 		<div class="w-3/4 font-semibold text-white">
 			<h1 class="m-5 w-[60%] text-4xl">Let’s talk about your project</h1>
 			<p class="m-5 w-[70%] text-sm">
@@ -41,14 +41,11 @@
 			<p></p>
 		</div>
 		<div class="w-1/4">
-			<Button
-				class="bg-white p-10 text-base text-black hover:bg-[#ffad9b] hover:text-white"
-				href="/contact">Get in touch</Button
-			>
+			<Button variant="pink" size="default" href="/contact">Get in touch</Button>
 		</div>
 	</div>
 	<!-- this is the contact and social section -->
-	<div class="flex w-full flex-col items-center justify-center bg-[#1d1c1e] p-[5%]">
+	<div class="flex w-full flex-col items-center justify-center bg-coldblack p-[5%]">
 		{@render header(logoLight, 'text-white')}
 		<Separator class="w-[80%] bg-gray-500" />
 		<div class="mt-10 flex w-[80%] items-center justify-between text-white">

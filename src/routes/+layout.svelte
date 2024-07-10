@@ -71,10 +71,10 @@
 {/snippet}
 
 <!-- main content -->
-<div class=" m-[2%] flex flex-col items-center justify-center">
+<main class=" mx-[10%] mb-[2%] flex flex-col items-center justify-center">
 	{@render header(logoDark, 'hover:underline underline-offset-8')}
 	{@render children()}
-</div>
+</main>
 <div class="relative flex flex-col items-center justify-center">
 	{@render footer()}
 </div>

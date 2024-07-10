@@ -61,6 +61,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: [...fontFamily.sans]
+      },
+      backgroundImage: {
+        'hero-phone': "url('./src/assets/home/desktop/image-hero-phone.png')"
       }
     }
   },

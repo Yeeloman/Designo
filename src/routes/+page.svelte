@@ -32,7 +32,9 @@
 </script>
 
 {#snippet AwardWinning(phoneImage)}
-	<div class="flex max-h-fit w-full items-center justify-center rounded-[25px] bg-pink-cold pl-24">
+	<div
+		class="mb-10 flex max-h-fit w-full items-center justify-center rounded-[25px] bg-pink-cold pl-24"
+	>
 		<!-- the right side of the element -->
 		<div class="mt-[100px] w-3/4 space-y-8">
 			<h1 class="text-4xl font-bold text-white">
@@ -80,8 +82,9 @@
 	</div>
 {/snippet}
 
+<!-- Illustrations section -->
 {#snippet Illustrators(element)}
-	<div class="flex h-auto w-full flex-col items-center justify-center space-y-8 p-10">
+	<div class="flex h-auto w-full flex-col items-center justify-center space-y-8">
 		<img src={element.image} alt="a passionate illustartor" />
 		<h1 class="text-1xl font-bold">{element.title}</h1>
 		<p class="text-balance text-center text-sm font-thin text-gray-700">
@@ -89,10 +92,11 @@
 		</p>
 	</div>
 {/snippet}
-<main class="flex flex-col items-center justify-center space-y-40">
+
+<main class="flex flex-col items-center justify-center space-y-24">
 	{@render AwardWinning(HeroPhone)}
 	{@render GridDiv()}
-	<div class="flex h-auto w-full items-center justify-center p-10">
+	<div class="flex h-auto w-full items-center justify-center">
 		{#each IllustratorElements as element}
 			{@render Illustrators(element)}
 		{/each}

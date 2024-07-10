@@ -30,22 +30,10 @@
 {/snippet}
 
 {#snippet footer()}
-	<!-- this is the get in touch section -->
-	<div class="top-0 flex w-[80%] items-center justify-center rounded-2xl bg-pink-cold p-16">
-		<div class="w-3/4 font-semibold text-white">
-			<h1 class="m-5 w-[60%] text-4xl">Let’s talk about your project</h1>
-			<p class="m-5 w-[70%] text-sm">
-				Ready to take it to the next level? Contact us today and find out how our expertise can help
-				your business grow.
-			</p>
-			<p></p>
-		</div>
-		<div class="w-1/4">
-			<Button variant="pink" size="default" href="/contact">Get in touch</Button>
-		</div>
-	</div>
 	<!-- this is the contact and social section -->
-	<div class="flex w-full flex-col items-center justify-center bg-coldblack p-[5%]">
+	<div
+		class="absolute bottom-0 flex w-full flex-col items-center justify-center bg-coldblack p-[5%]"
+	>
 		{@render header(logoLight, 'text-white')}
 		<Separator class="w-[80%] bg-gray-500" />
 		<div class="mt-10 flex w-[80%] items-center justify-between text-white">
@@ -68,13 +56,30 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- this is the get in touch section -->
+	<div
+		class="absolute top-0 flex w-[80%] items-center justify-center rounded-2xl bg-pink-cold p-16"
+	>
+		<div class="w-3/4 font-semibold text-white">
+			<h1 class="m-5 w-[60%] text-4xl">Let’s talk about your project</h1>
+			<p class="m-5 w-[70%] text-sm">
+				Ready to take it to the next level? Contact us today and find out how our expertise can help
+				your business grow.
+			</p>
+			<p></p>
+		</div>
+		<div class="w-1/4">
+			<Button variant="pink" size="default" href="/contact">Get in touch</Button>
+		</div>
+	</div>
 {/snippet}
 
 <!-- main content -->
-<main class=" mx-[10%] mb-[2%] flex flex-col items-center justify-center">
+<main class=" mx-[10%] mb-[7%] flex flex-col items-center justify-center">
 	{@render header(logoDark, 'hover:underline underline-offset-8')}
 	{@render children()}
 </main>
-<div class="relative flex flex-col items-center justify-center">
+<div class="relative mt-[15%] flex min-h-[38rem] flex-col items-center justify-center">
 	{@render footer()}
 </div>

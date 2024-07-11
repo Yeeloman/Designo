@@ -83,12 +83,12 @@
 {/snippet}
 
 <!-- Illustrations section -->
-{#snippet Illustrators(element)}
+{#snippet Illustrators({ image, title, description })}
 	<div class="flex h-auto w-full flex-col items-center justify-center space-y-8">
-		<img src={element.image} alt="a passionate illustartor" />
-		<h1 class="text-1xl font-bold">{element.title}</h1>
+		<img src={image} alt="a passionate illustartor" />
+		<h1 class="text-1xl font-bold">{title}</h1>
 		<p class="text-balance text-center text-sm font-thin text-gray-700">
-			{element.description}
+			{description}
 		</p>
 	</div>
 {/snippet}

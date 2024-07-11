@@ -50,7 +50,8 @@ const config: Config = {
         },
         pink: {
           cold: "#E78168",
-          hot: "#ffad9b"
+          hot: "#ffad9b",
+          toocold: "#FBF1EE"
         },
         coldblack: "#1d1c1e"
       },

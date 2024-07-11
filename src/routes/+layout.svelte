@@ -23,7 +23,7 @@
 		</div>
 		<div class="flex w-auto space-x-7">
 			<a class="font-thin {additionalClasses}" href="/about">OUR COMPANY</a>
-			<a class="font-thin {additionalClasses}" href="/locations">LOCATONS</a>
+			<a class="font-thin {additionalClasses}" href="/location">LOCATONS</a>
 			<a class="font-thin {additionalClasses}" href="/contact">CONTACT</a>
 		</div>
 	</div>

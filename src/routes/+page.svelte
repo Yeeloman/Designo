@@ -85,7 +85,7 @@
 <!-- Illustrations section -->
 {#snippet Illustrators({ image, title, description })}
 	<div class="flex h-auto w-full flex-col items-center justify-center space-y-8">
-		<img src={image} alt="a passionate illustartor" />
+		<img src={image} alt={title} />
 		<h1 class="text-1xl font-bold">{title}</h1>
 		<p class="text-balance text-center text-sm font-thin text-gray-700">
 			{description}

@@ -34,6 +34,7 @@
 	];
 </script>
 
+<!-- location info snippet -->
 {#snippet locationInfo({ image, title, office, address, secondAddress, phone, email }, index)}
 	<div
 		class="flex h-[350px] w-full items-center justify-between gap-9 {index % 2 == 0
@@ -60,6 +61,7 @@
 		<img src={image} alt={title} class="size-[350px] rounded-2xl" />
 	</div>
 {/snippet}
+
 <main class="flex w-full flex-col items-center justify-center gap-16 py-8">
 	{#each locationInfoList as location, index}
 		{@render locationInfo(location, index)}
